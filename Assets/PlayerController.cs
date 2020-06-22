@@ -29,7 +29,10 @@ public class PlayerController : MonoBehaviour
     }
     public void Die()
     {
-        //자신의 게임 오브젝트 비활성화
         gameObject.SetActive(false);
+
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        gameManager.EndGame();
+
     }
 }
